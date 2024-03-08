@@ -1,0 +1,26 @@
+torchrun --nproc_per_node=4 --master_port=20001 fastchat/train/train_mem.py \
+    --model_name_or_path ckpts/llama-2-7b-hf \
+    --data_path $DATA_PATH \
+    --bf16 True \
+    --output_dir $CKPT_PATH \
+    --num_train_epochs 15 \
+    --per_device_train_batch_size 2 \
+    --per_device_eval_batch_size 1 \
+    --gradient_accumulation_steps 16 \
+    --neftune_noise_alpha 15 \
+    --evaluation_strategy "no" \
+    --save_strategy "epoch" \
+    --save_total_limit 1 \
+    --learning_rate 1e-5 \
+    --weight_decay 0.1 \
+    --lr_scheduler_type "linear" \
+    --adam_beta1 0.9 \
+    --adam_beta2 0.95 \
+    --logging_steps 1 \
+    --fsdp "full_shard auto_wrap" \
+    --fsdp_transformer_layer_cls_to_wrap 'LlamaDecoderLayer' \
+    --tf32 True \
+    --model_max_length 2048 \
+    --gradient_checkpointing True \
+    --lazy_preprocess True \
+    --wandb_run_name $LOG_NAME \
