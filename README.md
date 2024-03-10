@@ -12,6 +12,7 @@
 ## :tada: News
 - [Mar 08, 2024] The code and datasets for this project are released.
 - [Mar 04, 2024] Our paper was accepted to the <a href="https://dmlr.ai/">ICLR 2024 Workshop on Data-centric Machine Learning Research</a>.
+- [Feb 16, 2024] Thanks to <a href="https://twitter.com/_lewtun">@_lewtun</a>, the idea of selecting 1,000 instructions with the longest response is demonstrated effective in the <a href="https://huggingface.co/datasets/teknium/OpenHermes-2.5">OpenHermes-2.5</a> dataset. Specifically, fine-tuning <a href="https://huggingface.co/mistralai/Mistral-7B-v0.1">Mistral-7B</a> on <a href="https://huggingface.co/datasets/HuggingFaceH4/OpenHermes-2.5-1k-longest">OpenHermes-2.5-1k-longest</a> produces a chat model comparable in performance to training over the full ~1 million examples.
 
 ## :rocket: ToDo
 - [X] Release the code
