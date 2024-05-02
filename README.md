@@ -1,8 +1,9 @@
-# Long Is More for Alignment: A Simple but Tough-to-Beat Baseline for Instruction Fine-Tuning
+# Long Is More for Alignment: A Simple but Tough-to-Beat Baseline for Instruction Fine-Tuning (ICML 2024)
 
 <a href="https://marcelluszhao.github.io/">Hao Zhao</a>, <a href="https://www.andriushchenko.me/">Maksym Andriushchenko</a>, <a href="https://scholar.google.com/citations?user=laq9cq0AAAAJ&hl=zh-CN">Francesco Croce</a>, <a href="https://people.epfl.ch/nicolas.flammarion">Nicolas Flammarion</a> (EPFL)
 
-**Paper:** [https://arxiv.org/abs/2402.04833](https://arxiv.org/abs/2402.04833)
+**Paper:** [https://arxiv.org/abs/2402.04833](https://arxiv.org/abs/2402.04833) (accepted at ICML 2024)
+
 <p align="center"><img src="figures/longismore_summary_slide.png" width="900" /></p>
 
 > TL;DR: We uncover the surprising effectiveness of fine-tuning only on the longest 1,000 instruction of large datasets to obtain aligned models.
@@ -10,6 +11,7 @@
 > - Through ablation studies and comprehensive evaluations, we demonstrate that the impressive performance of our method is not achieved by exploring length bias.
 
 ## :tada: News
+- [May 02, 2024] Accepted at ICML 2024! See you in Vienna.
 - [Mar 08, 2024] The code and datasets for this project are released.
 - [Mar 04, 2024] Our paper was accepted to the <a href="https://dmlr.ai/">ICLR 2024 Workshop on Data-centric Machine Learning Research</a>.
 - [Feb 16, 2024] Thanks to <a href="https://twitter.com/_lewtun">@_lewtun</a>, the idea of selecting 1,000 instructions with the longest response is demonstrated effective in the <a href="https://huggingface.co/datasets/teknium/OpenHermes-2.5">OpenHermes-2.5</a> dataset. Specifically, fine-tuning <a href="https://huggingface.co/mistralai/Mistral-7B-v0.1">Mistral-7B</a> on <a href="https://huggingface.co/datasets/HuggingFaceH4/OpenHermes-2.5-1k-longest">OpenHermes-2.5-1k-longest</a> produces a chat model comparable in performance to training over the full ~1 million examples.
